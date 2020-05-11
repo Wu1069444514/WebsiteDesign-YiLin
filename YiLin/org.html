@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>艺术之林</title>
+<link href="style/YiLin-首页.css" rel="stylesheet" type="text/css">
+	
+<script>
+	
+var i=1;
+
+function changeimg()
+{
+
+ switch(i)
+	 {
+			 case 1:
+	 {
+			 document.getElementById("image1").checked=true;
+			 break;
+	 }
+		 case 2:
+	 {
+			 document.getElementById("image2").checked=true;
+			 break;
+	 }
+		 case 3:
+	 {
+			 document.getElementById("image3").checked=true;
+		 	 i = 0;
+			 break;
+	 }	 
+	 }
+	i++;
+}
+	
+window.setInterval("changeimg()",5000)//1000等于1秒
+	
+	
+  window.onscroll=function getScrollTop()
+{
+ var stroll;
+ var ysp = 0;
+ stroll = document.documentElement.scrollTop||document.body.scrollTop;
+ if(stroll >= 740)
+	 {
+		 document.getElementById("header").style.backgroundColor="rgba(0,0,0,0.6)";
+		 document.getElementById("register").style.color="rgba(40,40,40,1.00)";
+		 document.getElementById("header").style.opacity="1";
+		 document.getElementById("header").style.borderBottomStyle="ridge";
+		 document.getElementById("header").style.borderBottomColor="rgba(239,234,234,1.00)";
+		 ysp = 1;
+	 }
+
+ else if(stroll < 740&& stroll > 0)
+	 {
+	    document.getElementById("register").style.color="rgba(243,232,232,1.00)";
+		document.getElementById("header").style.opacity="0";	
+		ysp = 1;
+	 }
+	  
+ else if(stroll == 0)
+     {
+	    document.getElementById("register").style.color="rgba(243,232,232,1.00)";
+		document.getElementById("header").style.opacity="1";
+		document.getElementById("header").style.backgroundColor="rgba(0,0,0,0)";
+		document.getElementById("header").style.borderBottomStyle="none";
+		ysp = 0;
+	 }
+	  
+ if(ysp == 1)
+	 {
+		document.getElementById("ysp").style.animation="ysp 2000ms linear 1 normal";
+	 }
+ else
+		document.getElementById("ysp").style.animation="ysp	0 linear  1normal";
+	  
+ if(stroll>900)
+	  {
+		 document.getElementById("ysj").style.animation="ysj 2000ms linear 1 normal";
+	  }
+ else
+	 	 document.getElementById("ysj").style.animation="ysj 0 linear 1 normal";
+	  
+ if(stroll>1050)
+	 {
+		 document.getElementById("ysj1").style.animation="ysj1 1000ms linear 1 normal";
+	 }
+	  
+ else
+	 	 document.getElementById("ysj1").style.animation="ysj1 0 linear 1 normal";
+	  
+ if(stroll>1450)
+	 {
+		 document.getElementById("ysj2").style.animation="ysj2 1000ms linear 1 normal";
+	 }
+	  
+ else
+	 	 document.getElementById("ysj2").style.animation="ysj2 0 linear 1 normal";
+	  
+if(stroll>1800)
+	 {
+		 document.getElementById("ysj3").style.animation="ysj3 1000ms linear 1 normal";
+	 }
+	  
+ else
+	 	 document.getElementById("ysj3").style.animation="ysj3 0 linear 1 normal";
+
+	  
+}
+  
+  
+
+</script>
+	
+	
+<style type="text/css">
+<!--
+.footer a:link {
+	text-decoration: none;
+	color:rgba(106,106,106,0.80);
+}
+.footer a:visited {
+	text-decoration: none;
+	color:rgba(106,106,106,0.80);
+}
+.footer a:hover {
+	text-decoration: none;
+	color:rgba(80,80,80,0.80);
+}
+.footer a:active {
+ 	text-decoration: none;
+	color:rgba(80,80,80,0.80);
+}
+	
+.header a:link {
+	text-decoration: none;
+	color: rgba(253,247,247,1.00);
+}
+.header a:visited {
+	text-decoration: none;
+	color: rgba(253,247,247,1.00);
+}
+.header a:hover {
+	text-decoration: none;
+	color:rgba(173,169,169,0.50);
+}
+.header a:active {
+ 	text-decoration: none;
+	color:rgba(173,169,169,0.50);
+}
+	
+	
+-->
+</style>
+		
+</head>
+
+
+<body >
+
+ <header id="header" class="header" style="	background-color: rgba(0,0,0,0);opacity: 1" >
+		<div class="header_logo1"><img src="image/logo.png" width="50" height="50" alt=""/></div>
+		<div class="header_logo2"><img src="image/yilin.png" alt="" height="50"/></div>
+	 
+	    <div class="header_bt1"><a href="http://192.168.17.1/org.html" target="new">首页</a></div>
+		<div class="header_bt2"><a href="http://192.168.17.1/art.html" target="new">艺术</a></div>
+		<!--<div class="header_bt3">艺术家</div>-->
+		<div class="header_bt4"><a href="http://192.168.17.1/news.asp" target="new">世界</a></div>
+		<div class="header_register" id="denglu"><img src="image/登录.png" width="20" height="20" alt=""/></div>
+		<div class="header_tag1"><img src="image/箭头.png" width="10" height="20" alt=""/></div>
+		<div class="header_line1"><img src="image/分割线.png"  height="20" alt=""/></div>
+		<div class="header_share"><img src="image/分享.png" width="20" height="20" alt=""/></div>
+		<div class="header_tag2"><img src="image/箭头.png" width="10" height="20" alt=""/></div>
+		<div class="header_line2"><img src="image/分割线.png"  height="20" alt=""/></div>
+		<div class="header_register_boder_out">
+		<div class="header_register_boder" id="register" style=" color:rgba(243,232,232,1.00);">
+			<a href="http://192.168.17.1/login.asp" target="new">登录</a>
+			<a href="http://192.168.17.1/register.asp" target="new">注册</a>
+		</div>
+		</div>
+	</header>
+	
+ <div class="mk_1" >
+	<input name="mk_1_choose" type="radio" id="image1" style="display: none" checked >
+	<input type="radio" name="mk_1_choose" id="image2" style="display: none">
+	<input type="radio" name="mk_1_choose" id="image3" style="display: none">
+  
+	
+ <div class="image">
+	
+   <ul class="image1" style="list-style-type: none">
+			<li style=""><img src="image/梵高.jpg" width="100%" height="745" alt=""/></li>
+   </ul>
+   <ul class="image2" style="list-style-type: none" >
+    <li><img src="image/最后的晚餐.jpg" width="100%" height="745" alt=""/></li>
+   </ul> 
+   <ul class="image3" style="list-style-type: none">
+	  <li><img src="image/清明上河图.png" width="100%" height="745" alt=""/></li>
+	</ul>
+ </div>
+	
+ <div class="image_choose1">
+	    <ul style="list-style-type: none;" >
+			<li class="choose1_1"><label for="image1"><img src="image/龙肖.png" width="50" height="50" alt=""/> </label>
+			</li>
+			<li class="choose1_2"><label for="image2"><img src="image/龙肖.png" width="50" height="50" alt=""/> </label></li>
+			<li class="choose1_3"><label for="image3"><img src="image/龙肖.png" width="50" height="50" alt=""/> </label></li>
+		</ul>
+	</div>
+	  
+ <div class="image_choose2">
+  <ul style="list-style-type: none;" >
+			<li class="choose2_1"><label for="image1"><img src="image/龙肖-后.png" width="50" height="50" alt=""/> </label>
+			</li>
+			<li class="choose2_2"><label for="image2"><img src="image/龙肖-后.png" width="50" height="50" alt=""/> </label></li>
+			<li class="choose2_3"><label for="image3"><img src="image/龙肖-后.png" width="50" height="50" alt=""/> </label></li>
+	</ul>
+	
+ </div>
+	
+	
+</div>	
+	 
+ <div class="mk_2">
+	<input type="radio" name="mk_2_choose"  id="east" style="display: none" checked >
+	<input type="radio" name="mk_2_choose" id="west" style="display: none" >
+	 <div class="mk_2_ysp" id="ysp" ><img src="image/作品.png" width="453" height="145" alt=""/></div>
+   <div class="mk_2_bt">
+		<ul style="list-style-type: none">
+			<li class="mk_2_bt1"><label for="east">	
+				<div class="mk_2_bt1_formor"><img src="image/太极前.png" width="50" height="50" alt=""/></div>
+				<div class="mk_2_bt1_latter"><img src="image/太极后.png" width="50" height="50" alt=""/></div>
+				</label>
+			</li>
+			<li class="mk_2_bt2"><label for="west">
+			  <div class="mk_2_bt2_formor"><img src="image/西方前.png" width="50" height="50" alt=""/></div>
+			  <div class="mk_2_bt2_latter"><img src="image/西方后.png" width="50" height="50" alt=""/></div>
+		  </label></li>
+			<li class="mk_2_bt3">
+				<div class="mk_2_bt3_formor"><a href="http://192.168.17.1/art.html" target="new"><img src="image/更多前.png" alt="" width="42" height="42" border="0"/></a></div>
+				<div class="mk_2_bt3_latter"><a href="http://192.168.17.1/art.html" target="new"><img src="image/更多后.png" alt="" width="42" height="42" border="0"/></a></div>
+		  </li>
+		</ul>
+   </div>
+	<div class="mk_2_nr">
+		<div></div>
+		<ul class="mk_2_no1_list" style="list-style-type: none; ">
+			<li class="mk_2_east1"><img src="image/荷叶图.jpg" width="300" height="307" alt=""/></li>
+			<li class="mk_2_east2"><img src="image/乾隆三宝.jpg" width="370" height="226" alt=""/></li>
+			<li class="mk_2_east3"><img src="image/墨虾.jpg" width="320" height="226" alt=""/></li>
+			<li class="mk_2_east4"><img src="image/千里江山图.jpg" width="540" height="307" alt=""/></li>
+			<li class="mk_2_east5"><img src="image/朝霞待帆紫气来.jpg" width="480" height="226" alt=""/></li>
+			<li class="mk_2_east6"><img src="image/故宫藏瓷大雅斋.jpg" width="279" height="226" alt=""/></li>
+			<li class="mk_2_east7"><img src="image/清明上河图.png" width="625" height="307" alt=""/></li>
+			<div class="mk_2_east_bg"><img src="image/eastbg.jpg" width="102.7%" height="820" alt=""/></div>
+		</ul>
+		<ul class="mk_2_no2_list" style="list-style-type: none">
+			<li class="mk_2_west1"><img src="image/蒙拉丽莎.png" width="220" height="307" alt=""/></li>
+			<li class="mk_2_west2"><img src="image/星空.jpg" width="406" height="307" alt=""/></li>
+			<li class="mk_2_west3"><img src="image/萨莫色雷斯岛的胜利女神.jpg" width="205" height="307" alt=""/></li>
+			<li class="mk_2_west4"><img src="image/两个小孩.jpg" width="333" height="226" alt=""/></li>
+			<li class="mk_2_west5"><img src="image/创世纪.jpg" width="490" height="226" alt=""/></li>
+			<li class="mk_2_west6"><img src="image/伊莎贝拉•黛丝恬肖像.jpg" width="175" height="226" alt=""/></li>
+			<li class="mk_2_west7"><img src="image/杏花.png" width="425" height="307" alt=""/></li>
+			<li class="mk_2_west8"><img src="image/断臂的维纳斯.jpg" width="205" height="307" alt=""/></li>
+			<li class="mk_2_west9"><img src="image/House on the Gein.png" width="235" height="226" alt=""/></li>
+      	  <li class="mk_2_west10"><img src="image/白底上的黑方块.png" width="232" height="226" alt=""/></li>
+			<div class="mk_2_west_bg"><img src="image/westbg.png" width="102.7%" height="820" alt=""/></div>
+			
+			
+		  
+      </ul>
+   </div>
+
+</div>
+
+ <div class="mk_3">
+   <div class="mk_3_ysj" id ="ysj"><img src="image/艺术家.png" width="438" height="145" alt=""/></div>
+	 
+   <div id= "ysj1" class="mk_3_nr_ysj1">
+	 <img class="mk_3_ysj1_tx" src="image/齐白石.jpg" width="225" height="300" alt=""/>
+   	 <div class="mk_3_ysj1_nm"><p>齐白石</p></div>
+   	 <div class="mk_3_ysj1_js">
+			<p> 原名纯芝，字渭青，号兰亭。后改名璜，字濒生，号白石、白石山翁、老萍、饿叟、借山吟馆主者、寄萍堂上老人、三百石印富翁。</p>
+			<p> 是近现代中国绘画大师，世界文化名人。早年曾为木工，后以卖画为生，五十七岁后定居北京。擅画花鸟、虫鱼、山水、人物，笔墨雄浑滋润，色彩浓艳明快，造型简练生动，意境淳厚朴实。所作鱼虾虫蟹，天趣横生。</p>
+			<p> 齐白石书工篆隶，取法于秦汉碑版，行书饶古拙之趣，篆刻自成一家，善写诗文。曾任中央美术学院名誉教授、中国美术家协会主席等职。代表作有《蛙声十里出山泉》《墨虾》等。著有《白石诗草》《白石老人自述》等。</p>
+	    </div>
+   </div>
+	 
+   <div  id ="ysj2" class="mk_3_nr_ysj2">
+	<img class="mk_3_ysj2_tx" src="image/梵高自画像.png" width="250" height="300" alt=""/>
+	 <div class="mk_3_ysj2_nm"><p>Vincent Willem van Gogh</p></div>
+	   	 <div class="mk_3_ysj2_js">
+			<p> 文森特·威廉·梵·高(Vincent Willem van Gogh,1853-1890)，别名“梵高”或"梵谷"，荷兰后印象派画家。出生于新教牧师家庭，是后印象主义的先驱，并深深地影响了二十世纪艺术，尤其是野兽派与表现主义。</p>
+			<p> 他早期受荷兰画家马蒂斯·玛丽斯的影响以灰暗色系进行创作，直到他搬往巴黎与作为画商的弟弟同住，接触了当时震动了整个巴黎美术界的画家们，画风渐渐被印象派的画家影响，后来经过在野外的长期写生，色调渐渐由灰暗色系变为明亮色系。在他去世之后，他的作品《星夜》、《向日葵》与《麦田乌鸦》等，已跻身于全球最著名最珍贵的艺术作品的行列。 文森特的作品目前主要收纳在阿姆斯特丹的梵高美术馆，以及奥特洛的国立克罗-米勒美术馆。</p>
+	    </div>
+   </div>
+	  
+   <div id ="ysj3" class="mk_3_nr_ysj3">
+		<img class="mk_3_ysj3_tx" src="image/达芬奇.jpg" width="419" height="380" alt=""/>
+	 <div class="mk_3_ysj3_nm"><p>Leonardo di ser Piero da Vinci</p></div>
+	   	 <div class="mk_3_ysj3_js">
+			<p>达·芬奇是列奥纳多·迪·皮耶罗·达·芬奇 （意大利文原名：Leonardo di ser Piero da Vinci）的简称，出生于儒略历1452年4月15日（公历4月23日），毕业于意大利理工学院，1519年5月2日逝世，是意大利学者、艺术家。</p>
+			<p>欧洲文艺复兴时期的天才科学家、发明家、画家，生物学家。现代学者称他为“文艺复兴时期最完美的代表”，是人类历史上绝无仅有的全才，他最大的成就是绘画，他的杰作《蒙娜丽莎》、《最后的晚餐》、《岩间圣母》等作品，体现了他精湛的艺术造诣。他认为自然中最美的研究对象是人体，人体是大自然的奇妙之作品，画家应以人为绘画对象的核心。</p>
+			<p> 他是一位思想深邃，学识渊博、多才多艺的画家、天文学家、发明家、建筑工程师。他还擅长雕塑、音乐、发明、建筑，通晓数学、生理、物理、天文、地质等学科，既多才多艺，又勤奋多产，保存下来的手稿大约有6000页。他全部的科研成果尽数保存在他的手稿中，爱因斯坦认为，达·芬奇的科研成果如果在当时就发表的话，科技可以提前30-50年。</p>
+	    </div>
+   </div>
+	 
+ </div>
+	
+	
+<footer class="footer" style="text-decoration-line: none;">
+	<div><img src="image/底栏.png" width="100%" height="528" style="position: absolute;bottom: 0px;" alt=""/></div>
+	<div class="footer_author">
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">@2018 艺林</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);">By Wuxuhui</p>
+		<p style="color: rgba(106,106,106,0.80);">Wuhan University</p>
+		<p style="color: rgba(106,106,106,0.80);">Computer School</p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://192.168.17.1/news_control.asp" target="new">Manage</a></p>
+    </div>
+	<div class="footer_web" >
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">博物馆</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://www.dpm.org.cn/Home.html" target="new">故宫博物馆</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://www.louvre.fr/zh" target="new">卢浮宫博物馆</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://www.britishmuseum.org/" target="new">大英博物馆</a></p>
+
+	</div>
+		<div class="footer_focus" >
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">关注</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://mobile.twitter.com/" target="new">推特</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://zh-cn.facebook.com/" target="new">脸谱</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://weibo.com/" target="new">微博</a></p>
+	</div>
+</footer>
+	
+	
+
+</body>
+</html>

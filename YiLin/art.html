@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>艺术展示</title>
+<link href="style/YiLin-艺术.css" rel="stylesheet" type="text/css">
+	
+<script>
+	
+var i=1;
+var show=0;
+
+function changeimg()
+{
+
+ switch(i)
+	 {
+		 case 1:
+	 {
+			 document.getElementById("image1").checked=true;
+			 break;
+	 }
+		 case 2:
+	 {
+			 document.getElementById("image2").checked=true;
+			 break;
+	 }
+		 case 3:
+	 {
+			 document.getElementById("image3").checked=true;
+			 break;
+	 }	 
+		case 4:
+	 {
+			 document.getElementById("image4").checked=true;
+		 	 i = 0;
+			 break;
+	 }	
+	 }
+	i++;
+}
+	
+window.setInterval("changeimg()",5000)//1000等于1秒
+	
+	
+	function switching()
+{
+	var a=0;
+	
+	if(document.getElementById("image1").checked)
+		a=2;
+	else if(document.getElementById("image2").checked)
+		a=3;
+	else if( document.getElementById("image3").checked)
+		a=4;
+	else if(document.getElementById("image4").checked)
+		a=1;
+	
+ switch(a)
+	 {
+		 case 1:
+	 {
+			 document.getElementById("image1").checked=true;
+			 break;
+	 }
+		 case 2:
+	 {
+			 document.getElementById("image2").checked=true;
+			 break;
+	 }
+		 case 3:
+	 {
+			 document.getElementById("image3").checked=true;
+			 break;
+	 }	 
+		case 4:
+	 {
+			 document.getElementById("image4").checked=true;
+		 	 a = 0;
+			 break;
+	 }	
+	 }
+	
+
+	
+}
+	
+	function introduce_gh()
+	{
+		
+		if(show == 0){
+		document.getElementById("mk_1").style.opacity = "0.4";
+		document.getElementById("mk_2").style.opacity = "0.4";
+		document.getElementById("footer").style.opacity = "0.4";
+		document.getElementById("gh").style.display = "block";
+		show = 1;
+		}
+		else{
+		document.getElementById("mk_1").style.opacity = "1";
+		document.getElementById("mk_2").style.opacity = "1";
+		document.getElementById("footer").style.opacity = "1";
+		document.getElementById("gh").style.display = "none";
+			show = 0;
+		}
+	}
+	
+		function introduce_yh()
+	{
+		
+		if(show == 0){
+		document.getElementById("mk_1").style.opacity = "0.4";
+		document.getElementById("mk_2").style.opacity = "0.4";
+		document.getElementById("footer").style.opacity = "0.4";
+		document.getElementById("yh").style.display = "block";
+		show = 1;
+		}
+		else{
+		document.getElementById("mk_1").style.opacity = "1";
+		document.getElementById("mk_2").style.opacity = "1";
+		document.getElementById("footer").style.opacity = "1";
+		document.getElementById("yh").style.display = "none";
+			show = 0;
+		}
+	}
+	
+	
+		function introduce_sch()
+	{
+		
+		if(show == 0){
+		document.getElementById("mk_1").style.opacity = "0.4";
+		document.getElementById("mk_2").style.opacity = "0.4";
+		document.getElementById("footer").style.opacity = "0.4";
+		document.getElementById("sch").style.display = "block";
+		show = 1;
+		}
+		else{
+		document.getElementById("mk_1").style.opacity = "1";
+		document.getElementById("mk_2").style.opacity = "1";
+		document.getElementById("footer").style.opacity = "1";
+		document.getElementById("sch").style.display = "none";
+			show = 0;
+		}
+	}
+	
+	
+	
+	
+  window.onscroll=function getScrollTop()
+{
+ var stroll;
+ var ysp = 0;
+ stroll = document.documentElement.scrollTop||document.body.scrollTop;
+ if(stroll >= 740)
+	 {
+		 document.getElementById("header").style.backgroundColor="rgba(0,0,0,0.6)";
+		 document.getElementById("register").style.color="rgba(40,40,40,1.00)";
+		 document.getElementById("header").style.opacity="1";
+		 document.getElementById("header").style.borderBottomStyle="ridge";
+		 document.getElementById("header").style.borderBottomColor="rgba(239,234,234,1.00)";
+	 }
+
+ else if(stroll < 740&& stroll > 0)
+	 {
+	    document.getElementById("register").style.color="rgba(243,232,232,1.00)";
+		document.getElementById("header").style.opacity="0";	
+
+	 }
+	  
+ else if(stroll == 0)
+     {
+	    document.getElementById("register").style.color="rgba(243,232,232,1.00)";
+		document.getElementById("header").style.opacity="1";
+		document.getElementById("header").style.backgroundColor="rgba(0,0,0,0.6)";
+		document.getElementById("header").style.borderBottomStyle="none";
+	 }
+  }
+</script>
+	
+	
+<style type="text/css">
+<!--
+.footer a:link {
+	text-decoration: none;
+	color:rgba(106,106,106,0.80);
+}
+.footer a:visited {
+	text-decoration: none;
+	color:rgba(106,106,106,0.80);
+}
+.footer a:hover {
+	text-decoration: none;
+	color:rgba(80,80,80,0.80);
+}
+.footer a:active {
+ 	text-decoration: none;
+	color:rgba(80,80,80,0.80);
+}
+	
+.header a:link {
+	text-decoration: none;
+	color: rgba(253,247,247,1.00);
+}
+.header a:visited {
+	text-decoration: none;
+	color: rgba(253,247,247,1.00);
+}
+.header a:hover {
+	text-decoration: none;
+	color:rgba(173,169,169,0.50);
+}
+.header a:active {
+ 	text-decoration: none;
+	color:rgba(173,169,169,0.50);
+}
+	
+	
+-->
+</style>
+		
+</head>
+
+
+<body >
+
+ <header id="header" class="header" style="	background-color: rgba(0,0,0,0.6);opacity: 1" >
+		<div class="header_logo1"><img src="image/logo.png" width="50" height="50" alt=""/></div>
+		<div class="header_logo2"><img src="image/yilin.png" alt="" height="50"/></div>
+	 
+	    <div class="header_bt1"><a href="http://192.168.17.1/org.html" target="new">首页</a></div>
+		<div class="header_bt2"><a href="http://192.168.17.1/art.html" target="new">艺术</a></div>
+		<!--<div class="header_bt3">艺术家</div>-->
+		<div class="header_bt4"><a href="http://192.168.17.1/news.asp" target="new">世界</a></div>
+		<div class="header_register" id="denglu"><img src="image/登录.png" width="20" height="20" alt=""/></div>
+		<div class="header_tag1"><img src="image/箭头.png" width="10" height="20" alt=""/></div>
+		<div class="header_line1"><img src="image/分割线.png"  height="20" alt=""/></div>
+		<div class="header_share"><img src="image/分享.png" width="20" height="20" alt=""/></div>
+		<div class="header_tag2"><img src="image/箭头.png" width="10" height="20" alt=""/></div>
+		<div class="header_line2"><img src="image/分割线.png"  height="20" alt=""/></div>
+		<div class="header_register_boder_out">
+		<div class="header_register_boder" id="register" style=" color:rgba(243,232,232,1.00);">
+			<a href="http://192.168.17.1/login.asp" target="new">登录</a>
+			<a href="http://192.168.17.1/register.asp" target="new">注册</a>
+		</div>
+		</div>
+	</header>
+	
+ <div id ="mk_1" class="mk_1" >
+	<input name="mk_1_choose" type="radio" id="image1" style="display: none" checked >
+	<input type="radio" name="mk_1_choose" id="image2" style="display: none">
+	<input type="radio" name="mk_1_choose" id="image3" style="display: none">
+	<input type="radio" name="mk_1_choose" id="image4" style="display: none">
+  
+	
+ <div class="image">
+	
+   <ul class="image1" style="list-style-type: none">
+			<li style=""><img src="image/千里江山图大.png" width="100%" height="745" alt=""/></li>
+	   		 <div class="image1_js">
+			 <p style="position: absolute;left:5px;right: 5px;color: rgba(251,243,243,1.00);font-size:30px;text-align: center;">《千里江山图》</p>
+			 <p style="padding-top: 70px;padding-left:20px;padding-right: 20px; color: rgba(251,243,243,1.00);font-size:14px;">此为北宋画家王希孟传世的唯一作品。作者以概括精练的手法、绚丽的色彩和工细的笔致表现出祖国山河的雄伟壮观，此图一向被视为宋代青绿山水中的巨制杰构。</p>
+		 	</div>
+   </ul>
+   <ul class="image2" style="list-style-type: none" >
+    		<li><img src="image/梵高的卧室.png" width="100%" height="745" alt=""/></li>
+	   	   	<div class="image2_js">
+			 <p style="position: absolute;left:5px;right: 5px;color: rgba(251,243,243,1.00);font-size:30px;text-align: center;">《梵高的卧室》</p>
+			 <p style="padding-top: 70px;padding-left:20px;padding-right: 20px; color: rgba(251,243,243,1.00);font-size:14px;">这幅画是一幅具有荷兰传统的大型静物画。咖啡壶讲述了住进黄色屋子以后画家所发生的变化。在所有这些自画像中，这把草藤椅最引人注目。这把椅子处于强烈的阳光下、简朴的背景中，而高更的画像坐的据称是同一把椅子，却在夜间处于华丽的背景中——个人物品变成了一种比喻，象征着命运的不同。</p>
+		 	</div>
+   </ul> 
+   <ul class="image3" style="list-style-type: none">
+	  		<li><img src="image/日出·印象.png" width="100%" height="745" alt=""/></li>
+	   	   	<div class="image3_js">
+			 <p style="position: absolute;left:5px;right: 5px;color: rgba(251,243,243,1.00);font-size:30px;text-align: center;">《日出·印象》</p>
+			 <p style="padding-top: 70px;padding-left:20px;padding-right: 20px; color: rgba(251,243,243,1.00);font-size:14px;">《日出·印象》是法国印象派画家克劳德·莫奈于1872年在勒阿弗尔港口创作的一幅油画。该画描绘了晨雾笼罩中的日出港口景象，用美妙的光的变幻与运动展现了迷人景色，以及画家用轻快跳跃的笔触刻画了光在宽阔的海面上反射与颤动的生动景象。</p>
+		 	</div>
+	   
+   </ul>
+   <ul class="image4" style="list-style-type: none">
+	  		<li><img src="image/沉睡的海尔玛弗狄忒.png" width="100%" height="745" alt=""/></li>
+	   	   	<div class="image4_js">
+			 <p style="position: absolute;left:5px;right: 5px;color: rgba(251,243,243,1.00);font-size:30px;text-align: center;">《沉睡的海尔玛弗狄忒》</p>
+			 <p style="padding-top: 70px;padding-left:20px;padding-right: 20px; color: rgba(251,243,243,1.00);font-size:14px;">《沉睡的海尔玛弗狄忒》是十七世纪伟大的艺术大师乔凡尼·洛伦佐·贝尼尼备受争议的作品。传说海尔玛弗狄忒本是个人见人爱的美少年，美少女水仙子十分仰慕他，但是美少年不喜欢。。所以美少女为了永远和他在一起，就要求宙斯将他们的身体合二为一。从此美少年就成了雌雄同体。</p>
+		 	</div>
+   </ul>
+	 
+	 <div class="mk_1_switch">
+	 <div class="mk_1_switch_left" onClick="switching()"><img src="image/左.png" width="70" height="70" style ="opacity: 0.8;margin-left:20px;margin-top: 15px;" alt=""/></div>
+	 <div class="mk_1_switch_right" onClick="switching()"><img src="image/右.png" width="70" height="70" style ="opacity: 0.8;margin-right: 20px;margin-top: 15px;" alt=""/></div>
+	</div>
+	 
+	 
+ </div>
+	
+ <div class="image_choose1">
+	    <ul style="list-style-type: none;" >
+			<li class="choose1_1"><label for="image1"><img src="image/点.png" width="17" height="17" alt=""/> </label>
+			</li>
+			<li class="choose1_2"><label for="image2"><img src="image/点.png" width="17" height="17" alt=""/> </label></li>
+			<li class="choose1_3"><label for="image3"><img src="image/点.png" width="17" height="17" alt=""/> </label></li>
+			<li class="choose1_4"><label for="image4"><img src="image/点.png" width="17" height="17" alt=""/> </label></li>
+		</ul>
+ </div>
+	  
+ <div class="image_choose2">
+  <ul style="list-style-type: none;" >
+			<li class="choose2_1"><label for="image1"><img src="image/点-后.png" width="17" height="17" alt=""/> </label>
+			</li>
+			<li class="choose2_2"><label for="image2"><img src="image/点-后.png" width="17" height="17" alt=""/> </label></li>
+			<li class="choose2_3"><label for="image3"><img src="image/点-后.png" width="17" height="17" alt=""/> </label></li>
+	  		<li class="choose2_4"><label for="image4"><img src="image/点-后.png" width="17" height="17" alt=""/> </label></li>
+	</ul>
+	
+ </div>
+	
+
+	
+</div>	
+	
+ <div id = "mk_2" class="mk_2">
+	 <div class="mk_2_1">
+		<img src="image/清明上河图长.jpg" width="100%" height="350" alt=""/>
+		<div class="nb1">
+	    <p style="position: absolute;top:0px; color:rgba(100,58,38,1.00); font-weight: 500;font-size: 50px;">国画</p>
+		<p style="padding-top:110px; color:rgba(80,47,16,1.00); font-weight: 400;font-size: 20px;">中国画按其使用材料和表现方法，又可细分为水墨画、重彩、浅绛、工笔、写意、白描等；按其题材又有人物画、山水画、花鸟画等。</p>
+		</div>
+		<div class="gd1" onClick="introduce_gh()">
+			<p style="position: absolute;top:-2px;left:19px;color:rgba(240,240,240,1.00); font-weight: 500;font-size: 15px;">了解更多</p>
+		</div>
+	</div>
+
+	 <div class="mk_2_2">
+		 <img src="image/麦田飞鸦长.png" width="100%" height="350" alt=""/>
+		 <div class="nb2">
+		 <p style="position: absolute;top:0px; color:rgba(100,58,38,1.00); font-weight: 500;font-size: 50px;">油画</p>
+		 <p style="padding-top:110px; color:rgba(80,47,16,1.00); font-weight: 400;font-size: 20px;">油画的流派分为两大类。第一类是以客观的再现为主的创造性作品；第二类是以主观表现为主的创造性作品。</p>
+		 </div>
+		 <div class="gd2" onClick="introduce_yh()">
+		 <p style="position: absolute;top:-2px;left:19px;color:rgba(240,240,240,1.00); font-weight: 500;font-size: 15px;">了解更多</p>
+		 </div>
+	</div>
+	 <div class="mk_2_3">
+		 <img src="image/水彩长.png" width="100%" height="350" alt=""/>
+		 <div class="nb3">
+		 <p style="position: absolute;top:0px;color:rgba(100,58,38,1.00); font-weight: 500;font-size: 50px;">水彩画</p>
+		 <p style="padding-top:110px; color:rgba(80,47,16,1.00); font-weight: 400;font-size: 20px;">水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩。</p>
+		 </div>
+		 <div class="gd3" onClick="introduce_sch()">
+		 <p style="position: absolute;top:-2px;left:19px;color:rgba(240,240,240,1.00); font-weight: 500;font-size: 15px;">了解更多</p>
+		 </div>
+	</div>
+ </div>
+	
+ <div id = "gh" class = "gh" onClick="introduce_gh()">
+	<p style="position: absolute;top:0px;left:25%;color:rgba(255,255,255,1.00); font-weight: 500;font-size: 50px;font-family: ">国画 （中国传统绘画形式） </p>
+	<p style="position: absolute;top:120px;left:50px;right: 50px; color:rgba(240,240,240,1.00); font-weight: 500;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;国画一词起源于汉代，汉朝人认为中国是居天地之中者，所以称为中国，将中国的绘画称为“中国画”，简称“国画”。主要指的是画在绢、宣纸、帛上并加以装裱的卷轴画。国画是中国的传统绘画形式，是用毛笔蘸水、墨、彩作画于绢或纸上。工具和材料有毛笔、墨、国画颜料、宣纸、绢等，题材可分人物、山水、花鸟等，技法可分具象和写意。中国画在内容和艺术创作上，体现了古人对自然、社会及与之相关联的政治、哲学、宗教、道德、文艺等方面的认知。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;中国画历史悠久，远在2000多年前的战国时期就出现了画在丝织品上的绘画——帛画，这之前又有原始岩画和彩陶画。春秋战国最为著名的有《御龙图》帛画。它是在丝织品上绘画。这些早期绘画奠定了后世中国画以线为主要造型手段的基础。两汉和魏晋南北朝时期，域外文化的输入与本土文化所产生的撞击及融合，使这时的绘画形成以宗教绘画为主的局面，描绘本土历史人物、取材文学作品亦占一定比例，山水画、花鸟画亦在此时萌芽。隋唐时期社会经济、文化高度繁荣，绘画也随之呈现出全面繁荣的局面。山水画、花鸟画已发展成熟 ，宗教画达到了顶峰，并出现了世俗化倾向；人物画以表现贵族生活为主，并出现了具有时代特征的人物造型。五代两宋又进一步成熟和更加繁荣，人物画已转入描绘世俗生活，宗教画渐趋衰退，山水画、花鸟画跃居画坛主流。而文人画的出现及其在后世的发展，极大地丰富了中国画的创作观念和表现方法。元、明、清三代水墨山水和写意花鸟得到突出发展，文人画和风俗画成为中国画的主流，随着社会经济的逐渐稳定，文化艺术领域空前繁荣，涌现出很多热爱生活、崇尚艺术的伟大画家，历代画家们创作出了名垂千古的传世名画。</p>
+ 
+	</div>
+	
+ <div id = "yh" class = "yh" onClick="introduce_yh()">
+	<p style="position: absolute;top:0px;left:45%;color:rgba(255,255,255,1.00); font-weight: 500;font-size: 50px;font-family: ">油画</p>
+	<p style="position: absolute;top:120px;left:50px;right: 50px; color:rgba(240,240,240,1.00); font-weight: 500;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;油画是以用快干性的植物油（亚麻仁油、罂粟油、核桃油等）调和颜料，在画布亚麻布，纸板或木板上进行制作的一个画种。作画时使用的稀释剂为挥发性的松节油和干性的亚麻仁油等。画面所附着的颜料有较强的硬度，当画面干燥后，能长期保持光泽。凭借颜料的遮盖力和透明性能较充分地表现描绘对象，色彩丰富，立体质感强。油画是西洋画的主要画种之一。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;油画的前身是15世纪以前欧洲绘画中的蛋彩画，后经尼德兰画家扬·凡·艾克（Jan Van Eyck），（1385年-1441年） 对绘画材料等加以改良后发扬光大。后人因扬·凡·艾克对油画艺术技巧的纵深发展做出的独特贡献，誉其为“油画之父”。近代油画多用亚麻子油调和颜料，在经过处理的布或木板上作画，因为油画颜料干后不变色，多种颜色调和不会变得肮脏，画家可以画出丰富、逼真的色彩。油画颜料不透明，覆盖力强，所以绘画时可以由深到浅，逐层覆盖，使绘画产生立体感。油画逐渐成为西方绘画史中的主体绘画方式，存世的西方绘画作品主要是油画作品。随着时间的发展油画逐渐生活化，其中最著名的就是《蒙娜丽莎》表现的一个普通妇女并广为流传。19世纪后期，由于科技发展，许多新材料应用于油画领域，如丙烯颜料，油漆等。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;古典油画在整体上是油画语言等因素共时综合运用的结果，R.康平的三叶祭坛画《受胎告知》就细致地 呈现室内外的所有景物。意大利的提香是第1个特别注重油画色彩表现力的画家，他在暗底子上作画，并常用明度接近、色相略异的明亮色彩构成富丽堂皇的金黄色调，透明颜料的多次复叠，忽厚忽薄的笔法，又使色彩与形体有机溶合，造就出质感效果。从18世纪开始，油画艺术也同样在社会、文化、科技等多元因素的冲击下，有了翻天覆地、摧枯拉朽的变化。更多的流派、更多的思维、更丰富的创作、更深刻且影响更广的理论，激扬、解构、反叛，争奇斗艳、百花齐放。中国的油画最早出现在棺椁器具之中，据周礼、汉书等文献所记，二千多年前的中国已有用“油”绘画的历史。通常的说法是1581年利玛窦携天主、圣母像到中国后，才开始了中国的油画，其中一幅“木美人”作品，虽历时五百年，仍依稀可见画风的古朴厚重。
+	 </p>
+</div>
+	
+<div id = "sch" class = "sch" onClick="introduce_sch()">
+	<p style="position: absolute;top:0px;left:40%;color:rgba(255,255,255,1.00); font-weight: 500;font-size: 50px;font-family: ">水彩画</p>
+	<p style="position: absolute;top:120px;left:50px;right: 50px; color:rgba(240,240,240,1.00); font-weight: 500;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;水彩画是用水调和透明颜料作画的一种绘画方法，简称水彩，由于色彩透明，一层颜色覆盖另一层可以产生特殊的效果，但调和颜色过多或覆盖过多会使色彩肮脏，水干燥的快，所以水彩画不适宜制作大幅作品，适合制作风景等清新明快的小幅画作。水彩颜料携带方便，也可作为速写搜集素材用。与其他绘画比较起来，水彩画相当注重表现技法。其画法通常分“干画法”和“湿画法”两种。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;水彩画就其本身而言，具有两个基本特征：一是画面大多具有通透的视觉感觉；二是绘画过程中水的流动性。由此造成了水彩画不同于其他画种的外表风貌和创作技法的区别。颜料的透明性使水彩画产生一种明澈的表面效果，而水的流动性会生成淋漓酣畅、自然洒脱的意趣。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;水彩风景画的起源，最初是起源于“风土地形图”。18世纪地志学和制图术的发展给英国水彩画的形成产生了积极作用。到了19世纪中叶以后得到了迅猛发展，水彩画由最初的风土地形图逐渐发展成为独立的一个绘画门类，同时也确立了英国水彩画在世界美术史上的地位。水彩风景画是水彩画中的一个非常重要的题材，同时也最好的代表着水彩画的绘画风格。水彩风景有个很重要的特点就是注重写生，通过画家对光线、色彩、空气、景色的主观构造，从而构成新颖灵巧、色彩明亮、格调清新、用笔流畅的风景作品。<br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;现代的水彩画艺术不但可以表现出具有清新、透明、湿润、流畅、欢快的效果，还可以达到浑厚、粗犷、劲拔等扣人心弦的境界。它善于汲取其它画种的有关技法和多种风格形式，不断丰富和发展水彩画艺术，保留并弘扬了水彩画在物质材料、形式语言、精神意蕴诸方面特有的艺术风貌。随着科技的进步，新的绘画材料的产生，20世纪水彩画已不再局限于透明水彩与不透明水彩两大范畴。市面上常见的能用水稀释作画的材料，如Gesso、压克力、透明水彩液、水彩铅笔等，都属于水彩画的领域。
+	 </p>
+</div>
+	
+	
+	
+ <footer id = "footer" class="footer">
+	<div class="footer_author">
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">@2018 艺林</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);">By Wuxuhui</p>
+		<p style="color: rgba(106,106,106,0.80);">Wuhan University</p>
+		<p style="color: rgba(106,106,106,0.80);">Computer School</p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://192.168.17.1/news_control.asp" target="new">Manage</a></p>
+    </div>
+	<div class="footer_web" >
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">博物馆</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://www.dpm.org.cn/Home.html" target="new">故宫博物馆</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://www.louvre.fr/zh" target="new">卢浮宫博物馆</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="http://www.britishmuseum.org/" target="new">大英博物馆</a></p>
+
+	</div>
+		<div class="footer_focus" >
+		<p style="color: rgba(85,85,85,1.00); font-weight: 550;">关注</p>
+		<br>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://mobile.twitter.com/" target="new">推特</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://zh-cn.facebook.com/" target="new">脸谱</a></p>
+		<p style="color: rgba(106,106,106,0.80);"><a href="https://weibo.com/" target="new">微博</a></p>
+	</div>
+	
+	
+	</footer>
+	
+	
+
+	 
+
+</body>
+</html>
